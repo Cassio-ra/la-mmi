@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer utilities {
+    .bg-main {
+        background-image: url('public/backgrounds/bg-tl.png'), url('public/backgrounds/bg-br.jpg');
+        background-position: -5vw -5vh, 60vw 50vh;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 55vw 60vh, 45vw 80vh;
+    }
+    @media (max-width: 768px) {
+        .bg-main {
+            background-position: -10vw -10vh, 50vw 50vh;
+            background-size: 80vw 60vh, 75vw 75vh;
+        }
+    }
+}

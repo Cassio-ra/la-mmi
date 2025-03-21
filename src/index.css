@@ -2,11 +2,12 @@
 
 @layer utilities {
     .bg-main {
-        background-image: url('/backgrounds/bg-tl.png'), url('/backgrounds/bg-br.jpg');
+        background-image: url('./assets/backgrounds/bg-tl.png'), url('./assets/backgrounds/bg-br.jpg');
         background-position: -5vw -5vh, 60vw 50vh;
         background-repeat: no-repeat, no-repeat;
         background-size: 55vw 60vh, 45vw 80vh;
     }
+
     @media (max-width: 768px) {
         .bg-main {
             background-position: -10vw -10vh, 50vw 50vh;

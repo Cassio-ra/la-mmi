@@ -5,6 +5,8 @@ import 'swiper/css/pagination';
 import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 import {useEffect, useState} from 'react';
 import {BadgeCheck, Binoculars, Goal, Handshake, Scale, ShieldHalf, TreeDeciduous, UsersRound} from "lucide-react";
+import images from "./assets/backgrounds/index.js";
+import logo from "./assets/logo.png"
 
 function App() {
     const [swiperInstance, setSwiperInstance] = useState(null);
@@ -48,7 +50,7 @@ function App() {
                 className={`fixed w-full top-0 z-10 py-4 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
                 <div className="max-w-6xl mx-auto flex justify-between items-center">
                     <h1 className="xl:text-sm text-xs text-wrap font-bold uppercase flex items-center h-10 max-h-10">
-                        <img src="/logo.png" className="h-20 w-20 object-contain" alt="logo"/>
+                        <img src={logo} className="h-20 w-20 object-contain" alt="logo"/>
                         A chave da montagem e Manutenção Industrial
                     </h1>
                     <ul className="flex space-x-6">
@@ -92,7 +94,7 @@ function App() {
                     }}
                 >
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/bem_vindo.png"
+                        <img src={images.bem_vindo}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 1"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -106,7 +108,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/qualidade.jpg"
+                        <img src={images.qualidade}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 2"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -119,7 +121,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/seguranca.jpg"
+                        <img src={images.seguranca}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 3"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -132,7 +134,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/integridade.png"
+                        <img src={images.integridade}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 4"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -145,7 +147,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/comprometimento.jpg"
+                        <img src={images.comprometimento}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 5"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -159,7 +161,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/sustentabilidade.png"
+                        <img src={images.sustentabilidade}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 6"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -172,7 +174,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src="/backgrounds/trabalho_em_equipe.jpg"
+                        <img src={images.trabalho_em_equipe}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 7"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">

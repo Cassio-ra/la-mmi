@@ -49,11 +49,13 @@ function App() {
             <nav
                 className={`fixed w-full top-0 z-10 py-4 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
                 <div className="max-w-6xl mx-auto flex justify-between items-center">
-                    <h1 className="xl:text-sm text-xs text-wrap font-bold uppercase flex items-center h-10 max-h-10">
-                        <img src={logo} className="h-20 w-20 object-contain" alt="logo"/>
-                        A chave da montagem e Manutenção Industrial
+                    <h1 className="flex items-center h-10 max-h-10"
+                        onClick={() => goToSlide(0)}>
+                        <img src={logo}
+                             className={`object-contain h-30 w-30 ${isScrolled ? "" : "xl:h-45 xl:w-45 xl:mt-5"} transition-all`}
+                             alt="logo"/>
                     </h1>
-                    <ul className="flex space-x-6">
+                    <ul className="flex space-x-6 mr-5">
                         <li><a
                             onClick={() => goToSlide(0)}
                             className="text-gray-700 font-semibold hover:text-blue-500 hover:cursor-pointer">Início</a>
@@ -75,7 +77,7 @@ function App() {
                 </div>
             </nav>
 
-            {/*Swiper ocupando 100vh*/}
+            {/*Swiper*/}
             <div className="w-full h-screen">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
@@ -98,7 +100,8 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 1"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-all hyphens-auto">Bem Vindo</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Bem
+                                    Vindo</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Especialistas em montagem e
                                     manutenção industrial, oferecemos soluções completas para garantir o máximo
                                     desempenho, segurança e eficiência da sua operação. Com uma equipe experiente e
@@ -112,7 +115,7 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 2"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-all hyphens-auto">Qualidade</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Qualidade</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Na LA, qualidade é essencial em
                                     cada projeto de montagem e manutenção industrial. Utilizamos as melhores práticas e
                                     equipamentos modernos para oferecer soluções seguras, eficientes e duradouras,
@@ -125,7 +128,7 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 3"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-all hyphens-auto">Segurança</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Segurança</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Montagem e manutenção industrial
                                     exigem rigor e responsabilidade. Por isso, seguimos padrões de segurança elevados,
                                     protegendo sua equipe, seu patrimônio e assegurando operações sem riscos. Segurança
@@ -138,7 +141,7 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 4"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-all hyphens-auto">Integridade</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Integridade</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Trabalhamos com transparência,
                                     ética e compromisso em cada serviço de montagem e manutenção industrial. Valorizamos
                                     relações de confiança, garantindo soluções seguras, eficientes e alinhadas às
@@ -151,7 +154,7 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 5"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-all hyphens-auto">Comprometimento</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Comprometimento</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Na LA, estamos sempre prontos para
                                     atender com eficiência e dedicação. Nosso comprometimento com a excelência em
                                     montagem e manutenção industrial garante soluções ágeis, seguras e personalizadas
@@ -165,7 +168,7 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 6"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-all hyphens-auto">Sustentabilidade</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Sustentabilidade</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Eficiência e responsabilidade
                                     ambiental caminham juntas em nossos serviços de montagem e manutenção industrial.
                                     Com práticas sustentáveis, reduzimos desperdícios, otimizamos recursos e minimizamos
@@ -178,7 +181,8 @@ function App() {
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 7"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
-                                <h2 className="text-5xl font-bold break-word hyphens-auto">Trabalho em Equipe</h2>
+                                <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-word hyphens-auto">Trabalho
+                                    em Equipe</h2>
                                 <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">A força de um time comprometido é
                                     essencial para a excelência na montagem e manutenção industrial. Com união,
                                     experiência e dedicação, entregamos soluções eficientes e seguras, garantindo o
@@ -189,7 +193,7 @@ function App() {
                 </Swiper>
             </div>
 
-            {/* Conteúdo principal com fundo branco */}
+            {/* Conteúdo principal */}
             <main
                 className="w-full h-auto p-4 flex flex-wrap xl:justify-evenly justify-center items-center gap-4 bg-main">
                 {/* Blocos de missão e visão */}

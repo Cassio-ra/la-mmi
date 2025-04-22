@@ -155,7 +155,7 @@ function App() {
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
                                 <h2 className="text-[clamp(1.5rem,10vw,2rem)] font-bold break-all hyphens-auto">Comprometimento</h2>
-                                <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Na LA, estamos sempre prontos para
+                                <p className="mt-2 ml-4 text-md lg:w-[45vw] w-[60vw]">Estamos sempre prontos para
                                     atender com eficiência e dedicação. Nosso comprometimento com a excelência em
                                     montagem e manutenção industrial garante soluções ágeis, seguras e personalizadas
                                     para manter sua operação funcionando sem imprevistos. Seu sucesso é a nossa

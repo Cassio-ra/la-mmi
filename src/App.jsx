@@ -42,9 +42,11 @@ function App() {
         window.scrollTo({top: 0, behavior: "smooth"});
     }
 
+    const logos = [logo, logo, logo, logo, logo, logo, logo, logo, logo, logo];
+
 
     return (
-        <div className={`w-[calc(100vw-${scrollbarWidth}px)] bg-gray-100 overflow-hidden`}>
+        <div className={`w-[calc(100vw-${scrollbarWidth}px)] bg-white overflow-hidden`}>
             {/* Topbar */}
             <nav
                 className={`fixed w-full top-0 z-10 py-4 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
@@ -225,6 +227,37 @@ function App() {
                             necessidades dinâmicas da indústria, sempre com foco em resultados concretos e na satisfação
                             total de nossos clientes.</p>
                     </section>
+                </div>
+
+                <div className="w-full py-8">
+                    <Swiper
+                        modules={[Autoplay]}
+                        slidesPerView={5}
+                        spaceBetween={30}
+                        loop={true}
+                        freeMode={true}
+                        speed={3000}
+                        className="w-full"
+                        autoplay={{
+                            delay: 0,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: false,
+                        }}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 3,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                            }
+                        }}
+                    >
+                        {logos.map((img, index) => (
+                            <SwiperSlide key={index} className="flex justify-center items-center">
+                                <img src={img} alt={`Logo ${index + 1}`} className="h-20 object-contain grayscale hover:grayscale-0 transition" />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
 
                 {/* Opções */}

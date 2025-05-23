@@ -5,7 +5,8 @@ import 'swiper/css/pagination';
 import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 import {useEffect, useState} from 'react';
 import {BadgeCheck, Binoculars, Goal, Handshake, Scale, ShieldHalf, TreeDeciduous, UsersRound} from "lucide-react";
-import images from "./assets/backgrounds/index.js";
+import backgrounds from "./assets/backgrounds/index.js";
+import partners from "./assets/partners/index.js";
 import logo from "./assets/logo.png"
 
 function App() {
@@ -41,9 +42,6 @@ function App() {
         }, 3000);
         window.scrollTo({top: 0, behavior: "smooth"});
     }
-
-    const logos = [logo, logo, logo, logo, logo, logo, logo, logo, logo, logo];
-
 
     return (
         <div className={`w-[calc(100vw-${scrollbarWidth}px)] bg-white overflow-hidden`}>
@@ -98,7 +96,7 @@ function App() {
                     }}
                 >
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.bem_vindo}
+                        <img src={backgrounds.bem_vindo}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 1"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -113,7 +111,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.qualidade}
+                        <img src={backgrounds.qualidade}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 2"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -126,7 +124,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.seguranca}
+                        <img src={backgrounds.seguranca}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 3"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -139,7 +137,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.integridade}
+                        <img src={backgrounds.integridade}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 4"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -152,7 +150,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.comprometimento}
+                        <img src={backgrounds.comprometimento}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 5"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -166,7 +164,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.sustentabilidade}
+                        <img src={backgrounds.sustentabilidade}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 6"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -179,7 +177,7 @@ function App() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="relative w-full h-full">
-                        <img src={images.trabalho_em_equipe}
+                        <img src={backgrounds.trabalho_em_equipe}
                              className="absolute top-0 left-0 w-full h-full object-cover" alt="Imagem 7"/>
                         <div className="absolute inset-0 bg-black/35">
                             <div className="absolute top-[30%] left-[15%] text-left text-white">
@@ -252,9 +250,9 @@ function App() {
                             }
                         }}
                     >
-                        {logos.map((img, index) => (
-                            <SwiperSlide key={index} className="flex justify-center items-center">
-                                <img src={img} alt={`Logo ${index + 1}`} className="h-20 object-contain grayscale hover:grayscale-0 transition" />
+                        {Object.values(partners).map((img, index) => (
+                            <SwiperSlide key={index} className="min-w-[10em] !flex !justify-center !items-center px-2">
+                                <img src={img} alt={`Logo ${index + 1}`} className="h-20 object-contain transition" />
                             </SwiperSlide>
                         ))}
                     </Swiper>

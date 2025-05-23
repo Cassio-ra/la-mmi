@@ -6,7 +6,7 @@ import seguranca from "./seguranca.jpg";
 import sustentabilidade from "./sustentabilidade.png";
 import trabalho_em_equipe from "./trabalho_em_equipe.jpg";
 
-const images = {
+const backgrounds = {
     bem_vindo,
     comprometimento,
     integridade,
@@ -16,4 +16,4 @@ const images = {
     trabalho_em_equipe
 }
 
-export default images;
+export default backgrounds;
